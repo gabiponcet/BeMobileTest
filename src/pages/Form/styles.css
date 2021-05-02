@@ -1,0 +1,31 @@
+.page {
+    background: rgba(27, 29, 32, 1);
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    border-radius: 5rem;
+}
+
+.form {
+    display: block;
+    margin-top: 5rem;
+}
+
+.input {
+    border-radius: 5px;
+    background-color: ivory;
+    padding: 5px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 1rem auto;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #c1c1c1;
+}
