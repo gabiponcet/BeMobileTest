@@ -1,11 +1,26 @@
 .home {
+    height:100vh;
     display: flex;
-    flex: 1;
-    align-items: center;
     justify-content: center;
-    margin-top: 15rem;
+    align-items: center;
+    background:
+        linear-gradient(
+            135deg,
+            var(--beMobileDarkestBlue),
+            var(--beMobileLightBlue),
+            var(--beMobileDarkestBlue)
+        );
 }
 
 .go {
     background: gray;
+    background-color: var(--beMobileDarkestBlue);
+    border:none;
+    width:35%;
+    height: 4em;
+    border-radius: 4px;
+    color:var(--beMobileLightGray);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 200ms;
 }
