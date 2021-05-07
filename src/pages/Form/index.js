@@ -47,7 +47,7 @@ function Form() {
       })
       .catch(e => console.log(e))
     }
-    console.log(CEP)
+    
   }, [cep]);
 
   function handleValidation () {
@@ -88,6 +88,15 @@ function Form() {
       });
 
       schema.validate({ email,name,cep,street, number, building, neighborhood, city, state }, { abortEarly: false })
+      .then(
+          () => {
+            const msg = `Olá, Gabi! Tudo bem? Testei tua aplicação até o final! =)`;
+          
+            const number = 5553991922192;
+          
+            window.open(`https://wa.me/${number}?text=${msg}`);
+          }
+      )
       .catch(err => {
           if(err instanceof yup.ValidationError) {
               const errorMessages = {}
@@ -97,7 +106,16 @@ function Form() {
     
               setErrors(errorMessages);
           }
+          else{
+            
+              const msg = `Opa, e aí Gabi, tudo bueno? Testei tua aplicação até o final!`;
+            
+              const number = 5553991922192;
+            
+              window.open(`https://wa.me/${number}?text=${msg}`);
+          }
       });
+
   }
   console.log(errors);
     return (
