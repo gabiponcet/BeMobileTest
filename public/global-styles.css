@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --beMobileDarkestBlue:#0f2961;
+    --beMobileStrongBlue:#1e2e61;
+    --beMobileNormalBlue:#28508d;
+    --beMobileLightBlue:#5d87e1;
+
+    --beMobileLightGray:#b5bdce;
+    --beMobileStrongGray:#798293;
+
+    --beMobileYellow:#fcb50f;
+    --beMoblieBlack:#020202;
+}
+
+body{
+    height:100vh;
+}
