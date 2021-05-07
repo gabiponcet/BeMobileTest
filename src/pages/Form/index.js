@@ -103,64 +103,77 @@ function Form() {
     return (
     <div className="page">
       <div className="form">
-          <p>{errors.name}</p>
-        <input 
-          className="input"
-          onChange={e => setName(e.target.value)} 
-          value={name} 
-          type="text" 
-          name="Nome" 
-          placeholder="Nome" 
-        />
-        <p>{errors.email}</p>
-        <input  
-          className="input"
-          onChange={e => setEmail(e.target.value)} 
-          value={email} 
-          type="text" 
-          name="Email" 
-          placeholder="Email"
+        <label className='label'>
+          <p className='error'>{errors.name}</p>
+          <input 
+            className="input"
+            onChange={e => setName(e.target.value)} 
+            value={name} 
+            type="text" 
+            name="Nome" 
+            placeholder="Nome" 
           />
-        <p>{errors.phone}</p>
-        <InputMask
-          className="input"
-          mask="9999999-9999"  
-          onChange={e => setPhone(e.target.value)} 
-          value={phone} 
-          type="text" 
-          name="Telefone" 
-          placeholder="(53)99999-9999"
+        </label>
+        <label className='label'>
+          <p className='error'>{errors.email}</p>
+          <input  
+            className="input"
+            onChange={e => setEmail(e.target.value)} 
+            value={email} 
+            type="text" 
+            name="Email" 
+            placeholder="Email"
+            />
+        </label>
+        <label className='label'>
+          <p className='error'>{errors.phone}</p>
+          <InputMask
+            className="input"
+            mask="9999999-9999"  
+            onChange={e => setPhone(e.target.value)} 
+            value={phone} 
+            type="text" 
+            name="Telefone" 
+            placeholder="(53)99999-9999"
+            />
+        </label>
+        <label className='label'>
+          <p className='error'>{errors.cep}</p>
+          <InputMask
+            className="input"
+            mask="99999-999"  
+            onChange={e => setCEP(e.target.value)}
+            value={cep}
+            type="text"
+            name="cep"
+            placeholder="CEP"
           />
-        <p>{errors.cep}</p>
-        <InputMask
-          className="input"
-          mask="99999-999"  
-          onChange={e => setCEP(e.target.value)}
-          value={cep}
-          type="text"
-          name="cep"
-          placeholder="CEP"
-        />
-        <p>{errors.street}</p>
-        <input  
-          className="input"
-          onChange={e => setStreet(e.target.value)}
-          value={street}
-          type="text"
-          name="street"
-          placeholder="Rua"
-        />
-        <p>{errors.number}</p>
-        <input  
-          className="input"
-          onChange={e => setNumber(e.target.value)} 
-          value={number} 
-          type="text" 
-          name="Número" 
-          placeholder="Número"
+        </label>
+        <label className='label'>
+          <p className='error'>{errors.street}</p>
+          <input  
+            className="input"
+            onChange={e => setStreet(e.target.value)}
+            value={street}
+            type="text"
+            name="street"
+            placeholder="Rua"
           />
-          <p>{errors.building}</p>
-        <input  
+        </label>
+        <label className='label'>
+          <p className='error'>{errors.number}</p>
+          <input  
+            className="input"
+            onChange={e => setNumber(e.target.value)} 
+            value={number} 
+            type="text" 
+            name="Número" 
+            placeholder="Número"
+            />
+        </label>
+        <label className='label'>
+          <p className='error'>{errors.building}</p>
+          <input  
           className="input"
           onChange={e => setBuilding(e.target.value)} 
           value={building} 
@@ -168,17 +181,22 @@ function Form() {
           name="Complemento" 
           placeholder="Complemento"
           />
-          <p>{errors.neighborhood}</p>
-        <input  
-          className="input"
-          onChange={e => setNeighborhood(e.target.value)} 
-          value={neighborhood} 
-          type="text" 
-          name="Bairro" 
-          placeholder="Bairro"
-          />
-          <p>{errors.city}</p>
-        <input  
+          
+        </label>
+        <label className='label'>
+            <p className='error'>{errors.neighborhood}</p>
+            <input  
+            className="input"
+            onChange={e => setNeighborhood(e.target.value)} 
+            value={neighborhood} 
+            type="text" 
+            name="Bairro" 
+            placeholder="Bairro"
+            />
+        </label>
+        <label className='label'>
+          <p className='error'>{errors.city}</p>
+          <input  
           className="input"
           onChange={e => setCity(e.target.value)} 
           value={city} 
@@ -186,8 +204,10 @@ function Form() {
           name="Cidade" 
           placeholder="Cidade"
           />
-          <p>{errors.state}</p>
-        <input  
+        </label>
+        <label className='label'>
+          <p className='error'>{errors.state}</p>
+          <input  
           className="input"
           onChange={e => setState(e.target.value)} 
           value={state} 
@@ -195,6 +215,7 @@ function Form() {
           name="Estado" 
           placeholder="UF"
           />
+        </label>
         <button className="button" onClick={handleValidation}>ENVIAR</button>
       </div>
     </div>

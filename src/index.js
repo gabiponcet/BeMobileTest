@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Router from './routes';
 
+
 ReactDOM.render(
   <React.StrictMode>
     <Router />
